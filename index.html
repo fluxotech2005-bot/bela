@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Parabéns, Bella! 🎉</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="cartao-container">
+        <!-- PASSO 1: Abertura -->
+        <section class="etapa ativa" id="etapa-0">
+            <h1>Olá, Bella! Tudo bem?</h1>
+            <p>Aqui é o seu tio! Desejo um feliz aniversário para você, tudo de bom, minha princesa. O tio preparou uma jogatina legal aqui para você se distrair um pouco!</p>
+            <p class="aviso-quiz">Responda as perguntinhas do tio e descubra a surpresa no final! 👇</p>
+            <button class="botao-proximo" onclick="proximaEtapa()">Começar Jogatina 🚀</button>
+        </section>
+
+        <!-- PASSO 2: Pergunta 1 -->
+        <section class="etapa" id="etapa-1">
+            <h2>Pergunta 1:</h2>
+            <p>O que você mais gosta de assistir / qual seu desenho favorito?</p>
+            <input type="text" id="resp-1" placeholder="Digite aqui...">
+            <button class="botao-proximo" onclick="proximaEtapa()">Avançar ➡️</button>
+        </section>
+
+        <!-- PASSO 3: Pergunta 2 -->
+        <section class="etapa" id="etapa-2">
+            <h2>Pergunta 2:</h2>
+            <p>Qual é a sua comida ou sobremesa preferida?</p>
+            <input type="text" id="resp-2" placeholder="Digite aqui...">
+            <button class="botao-proximo" onclick="proximaEtapa()">Avançar ➡️</button>
+        </section>
+
+        <!-- PASSO 4: Pergunta 3 -->
+        <section class="etapa" id="etapa-3">
+            <h2>Pergunta 3:</h2>
+            <p>Do que você mais gosta de brincar?</p>
+            <input type="text" id="resp-3" placeholder="Digite aqui...">
+            <button class="botao-proximo" onclick="proximaEtapa()">Ver Surpresa ✨</button>
+        </section>
+
+        <!-- PASSO 5: Surpresa Final com Fogos -->
+        <section class="etapa" id="etapa-4">
+            <h2 class="titulo-fogos">🎆 Parabéns, Minha Princesa! 🎆</h2>
+            <p>O tio pode estar morando um pouquinho longe de você, lá de Ponta Porã, mas o meu coração está sempre aí pertinho.</p>
+            <p>Obrigado por responder! Saiba que você é muito especial para nós e temos muito orgulho de você.</p>
+            <p class="assinatura">Com todo o amor do mundo, do seu Tio João e da tia Gabi ❤️</p>
+        </section>
+    </main>
+
+    <!-- O JAVASCRIPT PARA FAZER A MÁGICA ACONTECER -->
+    <script src="script.js"></script>
+</body>
+</html>

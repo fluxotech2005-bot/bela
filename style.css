@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+
+body {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3, #a18cd1);
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.cartao-container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 480px;
+    width: 90%;
+    text-align: center;
+    animation: surgeNaTela 1.2s ease-out forwards;
+    position: relative;
+}
+
+/* Oculta todas as etapas por padrão */
+.etapa {
+    display: none;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Mostra apenas a etapa que tem a classe 'ativa' */
+.etapa.ativa {
+    display: block;
+}
+
+h1, h2 {
+    color: #ff477e;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.aviso-quiz {
+    font-weight: bold;
+    color: #ff758c;
+    margin-top: 15px;
+}
+
+input {
+    width: 85%;
+    padding: 12px;
+    border: 2px solid #ff758c;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    margin: 15px 0;
+    text-align: center;
+    background-color: #fff9fa;
+}
+
+input:focus {
+    border-color: #d9386c;
+    box-shadow: 0 0 8px rgba(255, 117, 140, 0.6);
+}
+
+.botao-proximo {
+    background: #ff477e;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 5px 15px rgba(255, 71, 126, 0.4);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.botao-proximo:hover {
+    background: #e0366a;
+    transform: scale(1.05);
+}
+
+.assinatura {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #ff758c;
+}
+
+/* Animações */
+@keyframes surgeNaTela {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* ESTILOS ESPECIAIS PARA OS FOGOS DE ARTIFÍCIO NO JAVASCRIPT */
+.fogo {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    animation: explodir 1s ease-out forwards;
+    z-index: 999;
+}
+
+@keyframes explodir {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--x), var(--y)) scale(0);
+        opacity: 0;
+    }
+}
